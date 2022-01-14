@@ -22,8 +22,15 @@ export default class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    e.target.action = '/testPages/';
+    //alert("asxcaxsasx");
+    let  value = document.getElementById('inputGame').value;
+    if(value){
+      e.target.action = `/testPages/${value}/1`;
+      console.log(e.target.action);
+      e.target.submit();
+    }
   }
+
   render() {
     return (
       <div className="row justify-content-around">

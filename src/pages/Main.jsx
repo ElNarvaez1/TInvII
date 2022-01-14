@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
 import Home from "./Home";
+import Result from "./Result";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ export default class Main extends Component {
           <Routes path="/testPages"> 
             {/*-------------Header-----------------*/}
             <Route index exact path="/testPages" element={<Home/>} />
+            <Route index exact path="/testPages/:nameGame/:page" element={<Result/>} />
           </Routes>
         </Router>
       </div>
