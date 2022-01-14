@@ -33,7 +33,7 @@ export default class Form extends Component {
         filterGame = filter.value;
       }
 
-      e.target.action = `/testPages/${value}/1/${filterGame}/`;
+      e.target.action = `/testPages/${value}/0/${filterGame}/`;
       console.log(e.target.action);
       e.target.submit();
     }
@@ -56,7 +56,7 @@ export default class Form extends Component {
               <select
                 className="form-select transparent text-secondary px-3"
                 id="filter"
-                defaultValue="none"
+                defaultValue={(this.props.filter)?this.props.filter:"none"}
               >
                 <option value="none" selected>
                   Seleccione...

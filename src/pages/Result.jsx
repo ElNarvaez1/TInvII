@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Cart from "../components/Cart";
 import Form from "../components/Form";
+import NotFound from "../components/NotFound";
 
 const Result = (props) => {
   /*------------------Estados y Hooks----------------------------------------------------------------*/
@@ -10,7 +11,6 @@ const Result = (props) => {
     gamesIDS: [],
     page: page,
     sortBy: filter,
-
     nameGame: nameGame,
     // endPagination: false,
   });
@@ -102,10 +102,13 @@ const Result = (props) => {
     }
     finalDeals = filterGamesAtName(finalDeals);
     let finalDealsSorted = [];
+    //console.log(finalDeals);
 
+    //Extraemos los los nombres de los juegos
     datos = datos.map((e) => e.title);
     datos = datos.filter((game, pos) => datos.indexOf(game) == pos);
 
+    //Re ordenamos lo juegos xd
     datos.forEach((game) => {
       finalDeals.forEach((gameDeal) => {
         if (game == gameDeal.info.title) {
@@ -113,8 +116,6 @@ const Result = (props) => {
         }
       });
     });
-
-    console.log(finalDealsSorted.length);
 
     setGamesDeals(finalDealsSorted);
   };
@@ -164,21 +165,34 @@ const Result = (props) => {
     setStores(storsArray);
   };
 
-  return (
-    <>
-      <div className="d-flex justify-content-center py-5">
-        <div className="col-8 py-2">
-          <Form />
+  if (founded) {
+    return (
+      <>
+        <div className="d-flex justify-content-center py-5">
+          <div className="col-8 py-2">
+            <Form filter={filter} />
+          </div>
         </div>
-      </div>
-      <section className="container">
-        <div className="row justify-content-center">
-          {gamesDeals.map((game, index) => (
-            <Cart game={game} key={index} stors={stores} />
-          ))}
+        <section className="container">
+          <div className="row justify-content-center">
+            {gamesDeals.map((game, index) => (
+              <Cart game={game} key={index} stors={stores} />
+            ))}
+          </div>
+        </section>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="d-flex justify-content-center py-5">
+          <div className="col-8 py-2">
+            <Form filter={filter} />
+          </div>
         </div>
-      </section>
-    </>
-  );
+        <NotFound nameGame={nameGame}/>
+      </>
+    );
+  }
 };
 export default Result;
