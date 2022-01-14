@@ -34,9 +34,9 @@ export default class Cart extends Component {
 
   render() {
     return (
-      <div className="card mb-3 col-md-5 col-sm-7 mx-2">
+      <div className="card mb-3 col-md-5 col-sm-6 col-8 mx-2 bg-dark-card">
         <div className="row g-0">
-          <div className="col-md-4">
+          <div className="col-md-4 d-flex justify-content-center">
             <img
               src={this.props.game.info.thumb}
               className="img-fluid rounded-start img-card"
@@ -45,14 +45,14 @@ export default class Cart extends Component {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title">{this.props.game.info.title}</h5>
+              <h5 className="card-title text-white">{this.props.game.info.title}</h5>
               <ul className="list-unstyled">
                 {this.state.dealsPrimarys.map((deal, index) => (
                   <li
                     key={index}
                     className="py-1 d-flex justify-content-between align-items-end"
                   >
-                    <span>{this.testFunction(deal)}</span>
+                    <span className="text-secondary">{this.testFunction(deal)}</span>
                     <a
                       href={this.state.URL_DEALS + "=" + deal.dealID}
                       target="_blank"

@@ -18,7 +18,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div className="min-vw-100 min-vh-100 color-dark-game">
+      <div className="min-vh-100 color-dark-game">
         <Router>
         <Header />
           <Routes path="/testPages"> 
