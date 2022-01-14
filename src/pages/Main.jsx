@@ -24,7 +24,7 @@ export default class Main extends Component {
           <Routes path="/testPages"> 
             {/*-------------Header-----------------*/}
             <Route index exact path="/testPages" element={<Home/>} />
-            <Route index exact path="/testPages/:nameGame/:page" element={<Result/>} />
+            <Route index exact path="/testPages/:nameGame/:page/:filter" element={<Result/>} />
           </Routes>
         </Router>
       </div>

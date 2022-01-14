@@ -25,7 +25,15 @@ export default class Form extends Component {
     //alert("asxcaxsasx");
     let  value = document.getElementById('inputGame').value;
     if(value){
-      e.target.action = `/testPages/${value}/1`;
+      let filter = document.getElementById('filter');
+      let filterGame = null;
+      if(filter.value === 'none'){
+        filterGame = "Deal Rating";
+      }else{
+        filterGame = filter.value;
+      }
+
+      e.target.action = `/testPages/${value}/1/${filterGame}/`;
       console.log(e.target.action);
       e.target.submit();
     }
