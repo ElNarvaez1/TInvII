@@ -1,3 +1,10 @@
+:root{
+  --color-dark-game:#1e1e2f;
+  --color-pink-game:#da4ed0;
+}
+
+
+/*--------------------------------------------------------------------------*/
 .App {
   text-align: center;
 }
@@ -35,4 +42,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*------------------------------------------------------------------*/
+
+.color-dark-game{
+  background: var(--color-dark-game) !important;
+}
+.color-pink-game{
+  background: var(--color-pink-game);
+  transition: all 0.3s;
+}
+.color-pink-game-hover{
+  background: transparent;
+  transition: all 0.3s;
+}
+.color-pink-game-hover:hover{
+  background: var(--color-pink-game);
+}
+.new-height{
+  height: 300px;
+}
+.transparent{
+  background: transparent;
+}
+.transparent:focus{
+  background: transparent;
 }
