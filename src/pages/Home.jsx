@@ -5,10 +5,10 @@ export default class Home extends Component {
     return (
       <div className="container new-height d-flex">
         <div className="mt-auto container-fluid">
-          <p className="text-center text-secondary">
+          <p className="text-center" >
             ¡Hola! ¿Estas buscando algun juego en descuento?
           </p>
-          <p className="text-center text-secondary">
+          <p className="text-center">
             ¡Intenta buscarlo aqui :) !
           </p>
           <div className="row justify-content-center">
@@ -17,7 +17,7 @@ export default class Home extends Component {
                 </div>
           </div>
         </div>
-      </div>
+      </div> 
     );
   }
 }

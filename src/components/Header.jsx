@@ -36,7 +36,7 @@ export default class Header extends Component {
               <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
                 <div className="navbar-nav ">
                   {this.state.itemsMenu.map((items, index) => (
-                    <Link className="nav-link color-pink-game-hover text-white" to={items.ruta} key={index}>
+                    <Link className="nav-link" to={items.ruta} key={index}>
                       {items.name}
                     </Link>
                   ))}

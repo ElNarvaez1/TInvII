@@ -165,7 +165,7 @@ const Result = (props) => {
     setStores(storsArray);
   };
 
-  if (founded) {
+  if (founded == null || founded) {
     return (
       <>
         <div className="d-flex justify-content-center py-5">
@@ -182,7 +182,7 @@ const Result = (props) => {
         </section>
       </>
     );
-  } else {
+  } else if(!founded){
     return (
       <>
         <div className="d-flex justify-content-center py-5">

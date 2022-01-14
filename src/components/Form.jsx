@@ -47,14 +47,14 @@ export default class Form extends Component {
             <div className="col-md-6">
               <input
                 type="text"
-                className="form-control px-4 col-md-6 transparent text-white"
+                className="form-control px-4 col-md-6"
                 placeholder="Nombre del juegp"
                 id="inputGame"
               />
             </div>
             <div className="col-md-2">
               <select
-                className="form-select transparent text-secondary px-3"
+                className="form-select text-secondary px-3"
                 id="filter"
                 defaultValue={(this.props.filter)?this.props.filter:"none"}
               >
@@ -70,7 +70,7 @@ export default class Form extends Component {
             </div>
             <div className="col-md-3">
               <button
-                className="btn color-pink-game text-white px-2 w-100"
+                className="btn btn-outline-secondary px-2 w-100"
                 type="submit"
                 id=""
               >
