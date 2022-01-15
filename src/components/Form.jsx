@@ -34,7 +34,7 @@ export default class Form extends Component {
         filterGame = filter.value;
       }
 
-      e.target.action = `/testPages/${value}/0/${filterGame}/`;
+      e.target.action = `/TInvII/${value}/0/${filterGame}/`;
       console.log(e.target.action);
       e.target.submit();
     }

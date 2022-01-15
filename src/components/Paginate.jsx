@@ -9,7 +9,7 @@ const Paginate = (props) => {
           <li className="page-item">
             <a
               className="page-link"
-              href={`/testPages/${props.nameGame}/${Number(props.page) - 1}/${
+              href={`/TInvII/${props.nameGame}/${Number(props.page) - 1}/${
                 props.filter
               }/`}
             >

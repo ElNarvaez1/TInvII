@@ -26,10 +26,10 @@ export default class Main extends Component {
         <Header />
           <Routes> 
             {/*-------------Header-----------------*/}
-            <Route exact path="/testPages" element={<Home/>} />
-            <Route   path="/testPages/:nameGame/:page/:filter" element={<Result/>} />
-            <Route   path="/testPages/acerca-de" element={<AcercaDe></AcercaDe>} />
-            <Route   path="/testPages/tiendas" element={<Stores></Stores>} />
+            <Route exact path="/TInvII" element={<Home/>} />
+            <Route   path="/TInvII/:nameGame/:page/:filter" element={<Result/>} />
+            <Route   path="/TInvII/acerca-de" element={<AcercaDe></AcercaDe>} />
+            <Route   path="/TInvII/tiendas" element={<Stores></Stores>} />
           </Routes>
         </Router>
         <Footer/>
