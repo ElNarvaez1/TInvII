@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Cart from "../components/Cart";
 import Form from "../components/Form";
 import NotFound from "../components/NotFound";
+import Paginate from "../components/Paginate";
 
 const Result = (props) => {
   /*------------------Estados y Hooks----------------------------------------------------------------*/
@@ -168,16 +169,22 @@ const Result = (props) => {
   if (founded == null || founded) {
     return (
       <>
-        <div className="d-flex justify-content-center py-5">
-          <div className="col-8 py-2">
-            <Form filter={filter} paginate={ true } page={page}/>
+        <div className="row justify-content-center py-5 mx-0">
+          <div className="col-md-8 col-sm-10 col-11 px-0">
+            <Form filter={filter} paginate={ true } nameGame={nameGame} page={page}/>
+          </div>
+          <div className="col-md-8 col-sm-10 col-11 px-0">
+            <Paginate nameGame={nameGame} page={page} filter={filter} gamesDeals={gamesDeals}/>
           </div>
         </div>
-        <section className="container">
+        <section className="container mb-5">
           <div className="row justify-content-center">
             {gamesDeals.map((game, index) => (
               <Cart game={game} key={index} stors={stores} />
             ))}
+            {
+              (gamesDeals == 0) ? <p>Fin de la paginacion....</p>: ""
+            }
           </div>
         </section>
       </>

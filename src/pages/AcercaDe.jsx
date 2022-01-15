@@ -1,25 +1,27 @@
 import React, { Component, useState } from "react";
 import Avatar from "../components/Avatar";
+
+import imgOscar from "../37453654.png";
+import imgNarvaez from "../narvaez.jpg";
+
 export default function AcercaDe() {
   const [desarrolladores, setInformation] = useState([
     {
       nombre: "Narvaez Ruiz Alexis",
-      descripcion: "Ayudame wey, vamos a morir",
-      avatar: "../michael-tomlinson-xpKH4R50QHc-unsplash.jpg",
+      descripcion: "Profa no nos repruebe , la quiero mucho :,,,)",
+      avatar: imgNarvaez,
     },
     {
       nombre: "Ramirez Oscar Alexis",
       descripcion:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"+ 
-        "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"+
-        "nisi ut aliquip ex ea commodo consequat. ",
-      avatar: "../michael-tomlinson-xpKH4R50QHc-unsplash.jpg",
+      "Alumno del 9no semestre de la carrera ing en sistemas computacionales",
+      avatar: imgOscar,
     },
   ]);
 
   return (
     <section>
-      <div className="container">
+      <div className="container mb-1">
         <h1 className="h4 text-start my-3 ">Desarrolladores.</h1>
         <div className="row justify-content-around">
           {desarrolladores.map((desarrollador, index) => (
@@ -32,7 +34,7 @@ export default function AcercaDe() {
           ))}
         </div>
       </div>
-      <div className="container">
+      <div className="container mb-5 mt-2">
         <h1 className="h4 text-start mb-3">Cosas importantes.</h1>
         <div className="row">
              <p className="col-md-6 col-sm-12 p-2 text-start">

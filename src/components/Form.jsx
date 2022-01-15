@@ -16,6 +16,7 @@ export default class Form extends Component {
         { value: "Store", name: "Tienda" },
         { value: "recent", name: "Recientes" },
       ],
+      textInput:(this.props.nameGame)?this.props.nameGame:''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -39,20 +40,29 @@ export default class Form extends Component {
     }
   }
 
+  handleChange = (e) =>{
+    this.setState((prev)=>({
+      textInput:e.target.value
+    }));
+  }
+
+
   render() {
     return (
-      <div className="row justify-content-around">
+      <div className="row">
         <form onSubmit={this.handleSubmit}>
-          <div className="input-group mb-3 justify-content-around">
-            <div className="col-md-6">
+          <div className="input-group mb-3 justify-content-between">
+            <div className="col-md-6 col-sm-12 col-12 my-2">
               <input
                 type="text"
                 className="form-control px-4 col-md-6"
                 placeholder="Nombre del juegp"
                 id="inputGame"
+                onChange={this.handleChange}
+                value={ this.state.textInput}
               />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 col-sm-12 col-12 my-2">
               <select
                 className="form-select text-secondary px-3"
                 id="filter"
@@ -68,9 +78,9 @@ export default class Form extends Component {
                 ))}
               </select>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 col-sm-12 col-12 my-2">
               <button
-                className="btn btn-outline-primary text-white px-2 w-100"
+                className="btn btn-outline-secondary w-100"
                 type="submit"
                 id=""
               >

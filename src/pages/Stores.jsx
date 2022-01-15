@@ -17,13 +17,14 @@ const Stores = (props) => {
 
   return (
     <div className="container mt-5">
+      <h2 className="my-3">Tiendas</h2>
       <p>Listado de las tiendas de las cuales soportan este servicio</p>
       <ul>
           <li>&#127829; Tiendas Activas.</li>
           <li>&#10060; Tiendas no activas.</li>
       </ul>
       <div className="row mt-5 justify-content-center">
-        <div className="col-md-8">
+        <div className="col-md-8 mb-5">
           <table className="table">
             <thead>
               <tr>

@@ -6,6 +6,7 @@
  */
 import React, { Component } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Home from "./Home";
 import Result from "./Result";
 import Stores from "./Stores";
@@ -20,7 +21,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div className="min-vh-100">
+      <div className="min-vh-100 d-flex flex-column">
         <Router>
         <Header />
           <Routes> 
@@ -31,6 +32,7 @@ export default class Main extends Component {
             <Route   path="/testPages/tiendas" element={<Stores></Stores>} />
           </Routes>
         </Router>
+        <Footer/>
       </div>
     );
   }
