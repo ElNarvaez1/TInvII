@@ -4,7 +4,7 @@ export default class Avatar extends Component {
     constructor(props){
         super(props);
     }
-    render() {
+    render() { 
         return (
             <div className="col-md-4 col-sm-10 my-4">
                 <article className="d-flex flex-column align-items-center">

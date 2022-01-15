@@ -170,7 +170,7 @@ const Result = (props) => {
       <>
         <div className="d-flex justify-content-center py-5">
           <div className="col-8 py-2">
-            <Form filter={filter} />
+            <Form filter={filter} paginate={ true } page={page}/>
           </div>
         </div>
         <section className="container">

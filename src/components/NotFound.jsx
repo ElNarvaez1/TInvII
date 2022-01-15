@@ -7,7 +7,7 @@ const NotFound = ({nameGame}) => {
             <div className="alert alert-info" role="alert">
               <p>
                 Lo setimos mucho, el servicio no pudo encontrar algo relacionado
-                con {nameGame} :C
+                con {nameGame} &#128148;
               </p>
               <p>Cosas que podrias hacer:</p>
               <ul>
