@@ -1,20 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Paginate = (props) => {
+  const [rootURL, setRootURL] = useState("../")
+
+  const refreshPage = (e) => {
+    let rutaNueva= e.target.href;
+    //console.log(rutaNueva);
+    
+    window.location.href = rutaNueva;
+    window.location.reload();
+  }
+
   if (props.gamesDeals == 0) {
     return (
       <nav aria-label="Page navigation">
         <ul className="pagination">
           <li className="page-item">
-            <a
+            <Link
               className="page-link"
-              href={`/TInvII/${props.nameGame}/${Number(props.page) - 1}/${
+              to={`${rootURL}${props.nameGame}/${Number(props.page) - 1}/${
                 props.filter
-              }/`}
+              }/`} 
+              onClick={refreshPage}
             >
               Anterior
-            </a>
+            </Link>
           </li>
           <li className="page-item active">
             <a className="page-link " href="#">
@@ -30,14 +42,15 @@ const Paginate = (props) => {
       <nav aria-label="Page navigation">
         <ul className="pagination">
           <li className="page-item">
-            <a
+            <Link
               className="page-link"
-              href={`/testPages/${props.nameGame}/${Number(props.page) - 1}/${
+              to={`${rootURL}${props.nameGame}/${Number(props.page) - 1}/${
                 props.filter
               }/`}
+              onClick={refreshPage}
             >
               Anterior
-            </a>
+            </Link>
           </li>
           <li className="page-item active">
             <a className="page-link " href="#">
@@ -45,14 +58,15 @@ const Paginate = (props) => {
             </a>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link"
-              href={`/testPages/${props.nameGame}/${Number(props.page) + 1}/${
+              to={`${rootURL}${props.nameGame}/${Number(props.page) + 1}/${
                 props.filter
               }/`}
+              onClick={refreshPage}
             >
               Siguiente
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -67,14 +81,15 @@ const Paginate = (props) => {
             </a>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-link"
-              href={`/testPages/${props.nameGame}/${Number(props.page) + 1}/${
+              to={`${rootURL}${props.nameGame}/${Number(props.page) + 1}/${
                 props.filter
               }/`}
+              onClick={refreshPage}
             >
               Siguiente
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

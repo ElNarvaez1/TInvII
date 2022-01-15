@@ -10,22 +10,22 @@ import Result from "./pages/Result";
 import Stores from "./pages/Stores";
 import AcercaDe from "./pages/AcercaDe";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,HashRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="min-vh-100 d-flex flex-column">
-      <Router>
+      <HashRouter basename={`TInvII`}>
         <Header />
         <Routes>
           {/*-------------Header-----------------*/}
-          <Route exact path="/TInvII" element={<Home />} />
-          <Route path="/TInvII/acerca-de" element={<AcercaDe/>} />
-          <Route path="/TInvII/tiendas" element={<Stores />} />
-          <Route path="/TInvII/:nameGame/:page/:filter" element={<Result />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/acerca-de" element={<AcercaDe/>} />
+          <Route path="/tiendas" element={<Stores />} />
+          <Route path="/:nameGame/:page/:filter" element={<Result />} />
         </Routes>
         <Footer />
-      </Router>
+      </HashRouter>
     </div>
   );
 }

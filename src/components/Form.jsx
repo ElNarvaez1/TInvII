@@ -34,11 +34,10 @@ export default class Form extends Component {
         filterGame = filter.value;
       }
 
-      e.target.action = `/TInvII/${value}/0/${filterGame}/`;
+      e.target.action = `/#/TInvII/${value}/0/${filterGame}/`;
       
-      let ancla = document.createElement('a');
-      ancla.href = e.target.action;
-      ancla.click();
+      window.location.href = e.target.action;
+      window.location.reload();
       //e.target.submit();
     }
   }

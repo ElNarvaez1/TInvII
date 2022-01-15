@@ -166,7 +166,7 @@ const Result = (props) => {
     setStores(storsArray);
   };
 
-  if (founded == null || founded) {
+  if (founded == null || founded || page > 0) {
     return (
       <>
         <div className="row justify-content-center py-5 mx-0">
@@ -189,7 +189,7 @@ const Result = (props) => {
         </section>
       </>
     );
-  } else if(!founded){
+  } else if(!founded && page == 0){
     return (
       <>
         <div className="d-flex justify-content-center py-5">

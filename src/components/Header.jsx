@@ -6,9 +6,9 @@ export default class Header extends Component {
     super(props);
     this.state = {
       itemsMenu: [
-        { name: "Inicio", ruta: "/TInvII/" },
-        { name: "Tiendas", ruta: "/TInvII/tiendas" },
-        { name: "Acerca de", ruta: "/TInvII/acerca-de" },
+        { name: "Inicio", ruta: "/" },
+        { name: "Tiendas", ruta: "/tiendas" },
+        { name: "Acerca de", ruta: "/acerca-de" },
       ],
     };
   }
