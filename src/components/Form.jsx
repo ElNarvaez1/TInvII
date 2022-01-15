@@ -35,8 +35,11 @@ export default class Form extends Component {
       }
 
       e.target.action = `/TInvII/${value}/0/${filterGame}/`;
-      console.log(e.target.action);
-      e.target.submit();
+      
+      let ancla = document.createElement('a');
+      ancla.href = e.target.action;
+      ancla.click();
+      //e.target.submit();
     }
   }
 
