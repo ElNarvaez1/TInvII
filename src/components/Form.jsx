@@ -34,11 +34,12 @@ export default class Form extends Component {
         filterGame = filter.value;
       }
 
-      e.target.action = `/#/TInvII/${value}/0/${filterGame}/`;
+      e.target.action = `#/${value}/0/${filterGame}/`;
       
       window.location.href = e.target.action;
+      //window.location.reload();
+      e.target.submit();
       window.location.reload();
-      //e.target.submit();
     }
   }
 
@@ -58,7 +59,7 @@ export default class Form extends Component {
               <input
                 type="text"
                 className="form-control px-4 col-md-6"
-                placeholder="Nombre del juegp"
+                placeholder="Nombre del juego"
                 id="inputGame"
                 onChange={this.handleChange}
                 value={ this.state.textInput}

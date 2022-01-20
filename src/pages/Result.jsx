@@ -28,6 +28,8 @@ const Result = (props) => {
   useEffect(() => {
     loadStores();
     getGames();
+    
+    document.title  = "Resultados de" + nameGame;
   }, []);
 
   /* ------------------------------------Funciones extras-------------------------------------------------------------------------------- */
@@ -166,7 +168,7 @@ const Result = (props) => {
     setStores(storsArray);
   };
 
-  if (founded == null || founded || page > 0) {
+  if (founded == null || founded ) {
     return (
       <>
         <div className="row justify-content-center py-5 mx-0">
@@ -183,7 +185,7 @@ const Result = (props) => {
               <Cart game={game} key={index} stors={stores} />
             ))}
             {
-              (gamesDeals == 0) ? <p>Fin de la paginacion....</p>: ""
+              (gamesDeals == 0 && page > 0 ) ? <p>Fin de la paginacion....</p>: ""
             }
           </div>
         </section>

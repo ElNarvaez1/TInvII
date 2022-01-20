@@ -4,6 +4,8 @@ const Stores = (props) => {
   const [stores, setStores] = useState([]);
   useEffect(() => {
     loadStores();
+
+    document.title  = "Tiendas";
   }, []);
 
   const loadStores = async () => {

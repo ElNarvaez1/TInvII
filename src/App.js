@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Routes, Route,HashRouter } from "react-router-
 function App() {
   return (
     <div className="min-vh-100 d-flex flex-column">
-      <HashRouter basename={`TInvII`}>
+      <HashRouter basename={``}>
         <Header />
         <Routes>
           {/*-------------Header-----------------*/}

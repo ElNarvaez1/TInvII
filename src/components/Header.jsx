@@ -20,7 +20,7 @@ export default class Header extends Component {
           <nav className="navbar navbar-expand-md navbar-light bg-light">
             <div className="container-fluid">
               <a className="navbar-brand" href="/TInvII">
-                T-InvII
+               🎮 T-InvII
               </a>
               <button
                 className="navbar-toggler"
